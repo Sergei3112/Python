@@ -2,7 +2,7 @@
 # - входные и выходные данные хранятся в отдельных файлах
 
 
-with open('24RLE1_decoded.txt', 'r') as data:
+with open('homework1\lession24.py\24_RLE1_decoded.txt', 'r') as data:
     my_text = data.read()
 
 
@@ -23,22 +23,7 @@ def encode_rle(ss):
 
 str_code = encode_rle(my_text)
 print(str_code)
+dev_12 = str_code
 
-with open('24RLE2_encoded.txt', 'r') as data:
-    my_text2 = data.read()
-
-
-def decoding_rle(ss: str):
-    count = ''
-    str_decode = ''
-    for char in ss:
-        if char.isdigit():
-            count += char
-        else:
-            str_decode += char * int(count)
-            count = ''
-    return str_decode
-
-
-str_decode = decoding_rle(my_text2)
-print(str_decode)
+with open('homework1\lession24.py\24_RLE2_encoded.txt', 'w') as data:
+    data.write(dev_12)
